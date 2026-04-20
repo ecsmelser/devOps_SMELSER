@@ -1,13 +1,2 @@
-CC = gcc
-CFLAGS = $(shell xml2-config --cflags)
-LIBS = $(shell xml2-config --libs)
-TARGET = read_titles
-SRC = read_titles.c
-
-all: $(TARGET)
-
-$(TARGET): $(SRC)
-	gcc $(SRC) -o $(TARGET) $(CFLAGS) $(LIBS)
-
-clean:
-	rm -f $(TARGET)
+hello: hello.c
+	gcc hello.c -o hello
